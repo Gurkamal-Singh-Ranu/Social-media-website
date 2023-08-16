@@ -36,7 +36,7 @@ const PostWidget = ({
     const main = palette.neutral.main;
 
     const patchLike = async () =>{
-        const response = await fetch(`http://localhost:3001/posts/${postId}/like`,{
+    const response = await fetch(`https://social-media-backend-h3ta.onrender.com/posts/${postId}/like`,{
             method: "PATCH",
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -64,7 +64,8 @@ const PostWidget = ({
                 height="auto"
                 alt="post"
                 style={{borderRadius: "0.75rem", marginTop:"0.75rem"}}
-                src={`http://localhost:3001/assets/${picturePath}`}
+                // src={`http://localhost:3001/assets/${picturePath}`}
+                src={`https://social-media-backend-h3ta.onrender.com/assets/${picturePath}`}
             />
         )}
         <FlexBetween mt="0.25rem">
